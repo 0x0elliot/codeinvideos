@@ -8,7 +8,8 @@ def index():
 
 @app.route('/add1/<number>')
 def param(number):
-    sum = int(number) + 1
+    sum = eval(number) + 1 #dangerous implementation!
+    #sum = int(number) + 1 #safer implementation. 
     return f"The sum is: {sum}"
 
 
